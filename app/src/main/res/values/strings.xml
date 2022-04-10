@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Go4Food</string>
+    <string name="app_name2">Go 4 Food</string>
+    <string name="client">Client</string>
+    <string name="Driver">Driver</string>
+    <string name="Restaurant">Restaurant</string>
+    <string name="youAre">You are....</string>
+    <string name="register">Register</string>
+    <string name="signIn">Sign in</string>
+    <string name="welcom">Welcom to Go 4 Food :)</string>
+</resources>
