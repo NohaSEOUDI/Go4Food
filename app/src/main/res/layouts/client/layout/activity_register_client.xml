@@ -22,6 +22,7 @@
         android:id="@+id/edt_fName"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +44,7 @@
         android:id="@+id/edt_lName"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +54,7 @@
         android:id="@+id/email_adress"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +72,10 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_lName" />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/edt_pass"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +96,7 @@
         android:id="@+id/edt_numTel"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,8 +111,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_pass" />
 
+    <ProgressBar
+        android:id="@+id/progressBar_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numTel"
+        app:layout_constraintVertical_bias="0.306" />
 
     <Button
         android:id="@+id/next"
