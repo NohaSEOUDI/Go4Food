@@ -9,7 +9,7 @@
     <EditText
         android:id="@+id/email_adress"
         android:layout_width="342dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/email"
         android:layout_width="342dp"
-        android:layout_height="32dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
         android:text="@string/email_address"
         android:textStyle="bold"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908943598611",
+    "project_id": "go4food-ddfa8",
+    "storage_bucket": "go4food-ddfa8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908943598611:android:9919633ae87c3ac1870be6",
+        "android_client_info": {
+          "package_name": "fr.nohas.go4food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908943598611-5bhfn6sipahppr2rl76a6trcdd3euski.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW8GeFtjen4Y424ADy0bWK4wh06WvYDdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908943598611-5bhfn6sipahppr2rl76a6trcdd3euski.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

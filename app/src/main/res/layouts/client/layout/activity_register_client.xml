@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resto.RestoLoginActivity">
+    tools:context=".client.ClientRegisterActivity">
 
     <TextView
-        android:id="@+id/tv_resto_name"
+        android:id="@+id/tv_fname"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="@string/resto_name"
+        android:layout_marginTop="84dp"
+        android:text="@string/fName"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -19,19 +19,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_resto_name"
+        android:id="@+id/edt_fName"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_resto_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_fname" />
+
+    <TextView
+        android:id="@+id/tv_lname"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_fName" />
+
+
+    <EditText
+        android:id="@+id/edt_lName"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lname" />
 
     <EditText
         android:id="@+id/email_adress"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,13 +61,12 @@
         android:id="@+id/email"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:text="@string/email_address"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_resto_name" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_lName" />
 
     <EditText
         android:id="@+id/pass"
@@ -62,7 +81,6 @@
         android:id="@+id/password"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:text="@string/password"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,32 +88,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_adress" />
 
-    <TextView
-        android:id="@+id/iforgetPass"
+    <EditText
+        android:id="@+id/edt_numTel"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="@string/iforget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_numTel" />
+
+    <TextView
+        android:id="@+id/tv_numTel"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:text="@string/numTel"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass" />
 
+
     <Button
         android:id="@+id/next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cont"
-        android:backgroundTint="@color/clearYellow"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        android:layout_width="81dp"
+        android:layout_height="90dp"
+        android:text="@string/go"
+        app:cornerRadius="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iforgetPass"
-        app:layout_constraintVertical_bias="0.47" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edt_numTel"
+        app:layout_constraintVertical_bias="0.687" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

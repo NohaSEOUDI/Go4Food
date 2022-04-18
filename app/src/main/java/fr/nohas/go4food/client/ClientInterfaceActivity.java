@@ -18,7 +18,7 @@ public class ClientInterfaceActivity extends AppCompatActivity {
 
         btt_register=findViewById(R.id.butt_register);
         btt_register.setOnClickListener(view -> {
-         //  startActivity(new Intent(ClientInterfaceActivity.this,));
+           startActivity(new Intent(ClientInterfaceActivity.this,ClientRegisterActivity.class));
         });
 
         btt_login=findViewById(R.id.butt_signIn);
