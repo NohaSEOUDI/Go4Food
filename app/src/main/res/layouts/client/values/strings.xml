@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_address">Email Adress</string>
+    <string name="password">Password</string>
+    <string name="iforget">I forget my password ?</string>
+    <string name="go">GO</string>
+</resources>

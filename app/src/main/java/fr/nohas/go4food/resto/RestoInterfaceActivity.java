@@ -1,14 +1,16 @@
-package fr.nohas.go4food;
+package fr.nohas.go4food.resto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class DriverInterfaceActivity extends AppCompatActivity {
+import fr.nohas.go4food.R;
+
+public class RestoInterfaceActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_driver_interface);
+        setContentView(R.layout.activity_resto_interface);
     }
 }

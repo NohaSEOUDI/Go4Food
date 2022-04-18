@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import fr.nohas.go4food.client.ClientInterfaceActivity;
+import fr.nohas.go4food.driver.DriverInterfaceActivity;
+import fr.nohas.go4food.resto.RestoInterfaceActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonClient,buttonDriver,buttonResto;
@@ -22,19 +26,19 @@ public class MainActivity extends AppCompatActivity {
         buttonClient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ClientInterfaceActivity.class));
+                startActivity(new Intent(MainActivity.this, ClientInterfaceActivity.class));
             }
         });
         buttonDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,DriverInterfaceActivity.class));
+                startActivity(new Intent(MainActivity.this, DriverInterfaceActivity.class));
             }
         });
         buttonResto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,RestoInterfaceActivity.class));
+                startActivity(new Intent(MainActivity.this, RestoInterfaceActivity.class));
             }
         });
 
