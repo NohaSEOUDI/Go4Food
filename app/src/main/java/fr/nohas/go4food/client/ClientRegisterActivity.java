@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -46,7 +45,7 @@ public class ClientRegisterActivity extends AppCompatActivity {
         bttRegister= findViewById(R.id.next);
         bttRegister.setOnClickListener(View->{
             registerUser();
-          //  startActivity(new Intent(ClientRegisterActivity.this,ClientLoginActivity.class));
+            startActivity(new Intent(ClientRegisterActivity.this, ClientMenuActivity.class));
         });
 
         progressBar=findViewById(R.id.progressBar_register);

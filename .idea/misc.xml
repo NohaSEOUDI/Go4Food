@@ -3,21 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/category_backround.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/search_backround.xml" value="0.1835" />
         <entry key="app/src/main/res/layout/activity_client_interface.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_client_login.xml" value="0.14855072463768115" />
         <entry key="app/src/main/res/layout/activity_driver_interface.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_resto_interface.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_resto_menu.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_interface.xml" value="0.10552536231884058" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_login.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layouts/client/layout/activity_client_menu.xml" value="0.18" />
+        <entry key="app/src/main/res/layouts/client/layout/activity_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/client/layout/activity_register_client.xml" value="0.2" />
+        <entry key="app/src/main/res/layouts/client/layout/viewholder_category_item.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_interface.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_login.xml" value="0.15625" />
+        <entry key="app/src/main/res/layouts/driver/layout/activity_driver_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_register.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_interface.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_login.xml" value="0.15625" />
+        <entry key="app/src/main/res/layouts/resto/layout/activity_resto_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_register.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/bottom_app_bar.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/bottom_app_bar_client.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/bottom_app_bar_driver.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/bottom_app_bar_resto.xml" value="0.16" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1525" />
       </map>
     </option>

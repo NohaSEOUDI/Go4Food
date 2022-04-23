@@ -26,7 +26,9 @@
     <string name="email_address">Email Adress</string>
     <string name="password">Password</string>
     <string name="numTel">Phone Number</string>
-
+    <string name="find">Find Your Food</string>
+    <string name="categories">Categories</string>
+    <string name="popular">Popular</string>
     <string name="go">GO</string>
     <!-- Driver -->
     <string name="city">City</string>
@@ -47,8 +49,6 @@
     <string name="phone_required">Phone number is Required</string>
     <string name="cl_registered">Client has been registered successfuly</string>
     <string name="cl_not_registered">Failed to register ! Try again</string>
-
-
 
 
 </resources>
