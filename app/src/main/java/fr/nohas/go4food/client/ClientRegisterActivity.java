@@ -1,6 +1,6 @@
 package fr.nohas.go4food.client;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,19 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import fr.nohas.go4food.R;
 public class ClientRegisterActivity extends AppCompatActivity {
     private FirebaseAuth clientAuth;
-    private Button bttRegister;
     private ProgressBar progressBar;
     private EditText edt_firstName,edt_lastName,edt_email,edt_phone,edt_password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +38,7 @@ public class ClientRegisterActivity extends AppCompatActivity {
             return;
         }*/
 
-        bttRegister= findViewById(R.id.next);
+        Button bttRegister= findViewById(R.id.next);
         bttRegister.setOnClickListener(View->{
             registerUser();
             startActivity(new Intent(ClientRegisterActivity.this, ClientMenuActivity.class));
@@ -52,8 +48,6 @@ public class ClientRegisterActivity extends AppCompatActivity {
 
     }
     private void registerUser(){
-
-
         String fName,lName,emailAdress,phoneNumber,passwordString;
 
         fName=edt_firstName.getText().toString();
@@ -104,19 +98,14 @@ public class ClientRegisterActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         clientAuth.createUserWithEmailAndPassword(emailAdress,passwordString)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            //so we create a client object
-                            Client client= new Client(fName,lName,phoneNumber,emailAdress,passwordString);
-                            FirebaseDatabase.getInstance().getReference("Client")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(client).addOnCompleteListener(new OnCompleteListener<Void>(){
-
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()){
+                .addOnCompleteListener(task -> {
+                    if(task.isSuccessful()){
+                        //so we create a client object
+                        Client client= new Client(fName,lName,phoneNumber,emailAdress,passwordString);
+                        FirebaseDatabase.getInstance().getReference("Client")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(client).addOnCompleteListener(task1 -> {
+                                    if(task1.isSuccessful()){
                                         Toast.makeText(ClientRegisterActivity.this,getString(R.string.cl_registered), Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                         //redirect to login layout
@@ -124,12 +113,10 @@ public class ClientRegisterActivity extends AppCompatActivity {
                                         Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
-                                }
-                            });
-                        }else{
-                            Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-                        }
+                                });
+                    }else{
+                        Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
 

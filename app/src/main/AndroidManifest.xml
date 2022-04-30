@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="fr.nohas.go4food">
-    <uses-permission android:name="android.permission.INTERNET"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.nohas.go4food">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Go4Food">
+        <activity
+            android:name=".resto.RestoSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".resto.RestoAddOfferActivity"
+            android:exported="false" />
+        <activity
+            android:name=".resto.RestoWeelyPlanningActivity"
+            android:exported="false" />
         <activity
             android:name=".resto.RestoMenuActivity"
             android:exported="false" />

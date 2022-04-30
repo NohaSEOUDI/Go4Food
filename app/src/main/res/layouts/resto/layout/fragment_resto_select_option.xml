@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resto.RestoSelectOptionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/pleaseSelect"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/cb_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/cb_oneProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/oneProduct"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btt_save"
+        android:layout_marginTop="50dp"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/clearYellow"
+        android:text="@string/next"
+        android:textColor="@color/black"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textStyle="bold" />
+</TableLayout>

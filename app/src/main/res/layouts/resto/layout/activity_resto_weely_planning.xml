@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resto.RestoWeelyPlanningActivity">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_allDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/day"
+            android:textStyle="bold"
+            android:layout_column="1"
+            />
+        <TextView
+            android:id="@+id/tv_opH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opHour"
+            android:textStyle="bold"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/tv_clH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clHour"
+            android:textStyle="bold"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_Monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_nom"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/monday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_deb1"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_fin1"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_tues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_tues"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/tuesday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_debTues"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_finTues"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_wendnesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_wendnesday"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/wednesday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_debWend"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_finWend"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_thursday"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/thrusday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_debThrusday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_finThrusday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_Friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_Friday"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/friday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_debFriday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_finFriday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_saturday"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/saturday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_debSaturday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_finSaturday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_sunday"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/sunday"
+            android:layout_column="0"
+            />
+
+        <EditText
+            android:id="@+id/et_debSunday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+        <EditText
+            android:id="@+id/et_finSunday"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:inputType="time" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btt_save"
+        android:layout_marginTop="50dp"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/clearYellow"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+</TableLayout>

@@ -14,7 +14,7 @@
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_username">Username not valid</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
@@ -49,6 +49,61 @@
     <string name="phone_required">Phone number is Required</string>
     <string name="cl_registered">Client has been registered successfuly</string>
     <string name="cl_not_registered">Failed to register ! Try again</string>
+    <!-- Weekly days -->
+    <string name="day">Day</string>
+    <string name="opHour">Openning hour</string>
+    <string name="clHour">Clossing hour</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thrusday">Thrusday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="save">Save</string>
 
+    <!-- Fragment -->
+    <string name="pleaseSelect">Please Select....</string>
+    <string name="menu">Menu</string>
+    <string name="oneProduct">One product</string>
+    <string name="next">Next</string>
 
+    <string name="addNoreCommands">Add more commands</string>
+    <string name="newCommand">New Command</string>
+
+    <string name="failed">please try again</string>
+    <string name="tryAgain">Try Again</string>
+
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="variations">Variations</string>
+    <string name="photo">Photo</string>
+    <string name="listOfItems">List of items</string>
+    <string name="item1">item 1</string>
+    <string name="item2">item 2</string>
+    <string name="totalPrice">Total price</string>
+    <string name="description">Description</string>
+    <string name="uploadPhoto">Upload Photo</string>
+    <string name="add_items">Add</string>
+
+    <!-- Resto - Ietms Setting account -->
+    <string-array name="setting_item_name">
+        <item>Account</item>
+        <item>Position</item>
+        <item>Evaluation</item>
+        <item>Alertes</item>
+        <item>Schedual</item>
+        <item>Notifications</item>
+        <item>History</item>
+    </string-array>
+
+    <string-array name="description_setting_item_name">
+        <item>Information</item>
+        <item>Manage your adress</item>
+        <item>see your evaluation</item>
+        <item>new notifications</item>
+        <item>Planning</item>
+        <item>Notifications</item>
+        <item>Program</item>
+    </string-array>
 </resources>

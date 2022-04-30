@@ -18,6 +18,7 @@ public class ClientLoginActivity extends AppCompatActivity {
 
         passwordForgetten= findViewById(R.id.iforgetPass);
         next= findViewById(R.id.next);
+
         next.setOnClickListener(View->{
             startActivity(new Intent(ClientLoginActivity.this, ClientMenuActivity.class));
         });
