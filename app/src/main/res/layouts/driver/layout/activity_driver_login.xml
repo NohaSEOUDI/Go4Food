@@ -28,7 +28,7 @@
         android:layout_marginEnd="32dp"/>
 
     <EditText
-        android:id="@+id/email_adress"
+        android:id="@+id/edt_email_adress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -48,7 +48,7 @@
 
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/edt_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -63,7 +63,7 @@
         android:layout_marginEnd="32dp"/>
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/btnNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/go"
@@ -74,7 +74,7 @@
         />
 
     <TextView
-        android:id="@+id/iforgetPass"
+        android:id="@+id/tv_iforgetPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"

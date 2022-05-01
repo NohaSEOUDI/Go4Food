@@ -45,7 +45,7 @@
       />
 
     <ProgressBar
-        android:id="@+id/pb_round"
+        android:id="@+id/progb_round"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:visibility="invisible"
