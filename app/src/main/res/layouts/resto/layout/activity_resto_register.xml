@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,21 +16,18 @@
         android:layout_marginTop="60dp"
         android:text="@string/resto_name"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+         />
 
     <EditText
         android:id="@+id/edt_resto_name"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_resto_name" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+       />
 
     <TextView
         android:id="@+id/tv_adress"
@@ -38,20 +35,18 @@
         android:layout_height="wrap_content"
         android:text="@string/address"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_resto_name" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+       />
 
     <EditText
         android:id="@+id/edt_adress"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_adress" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+       />
 
     <TextView
         android:id="@+id/tv_city"
@@ -59,20 +54,18 @@
         android:layout_height="wrap_content"
         android:text="@string/city"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_adress" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+         />
 
     <EditText
         android:id="@+id/edt_city"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
     <TextView
         android:id="@+id/email"
@@ -80,20 +73,18 @@
         android:layout_height="wrap_content"
         android:text="@string/email_address"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_city" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+         />
 
     <EditText
-        android:id="@+id/email_adress"
+        android:id="@+id/edt_email_adress"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+       />
 
 
     <TextView
@@ -102,21 +93,19 @@
         android:layout_height="wrap_content"
         android:text="@string/password"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_adress" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/edt_pass"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
     <TextView
         android:id="@+id/tv_numTel"
@@ -125,33 +114,36 @@
         android:layout_marginTop="4dp"
         android:text="@string/numTel"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
     <EditText
         android:id="@+id/edt_numTel"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_numTel" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
+    <ProgressBar
+        android:id="@+id/pbar_progressBarRound"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/btt_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/clearYellow"
         android:text="@string/cont"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_numTel" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</TableLayout>

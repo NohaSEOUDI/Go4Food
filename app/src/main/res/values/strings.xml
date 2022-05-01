@@ -35,20 +35,33 @@
     <string name="age">Age</string>
     <string name="typeV">Type of Vehicule</string>
     <string name="deliveryC">Recive delivery commandes</string>
+
     <!-- Resto -->
     <string name="resto_name">Restaurant Name</string>
     <string name="cont">Continue</string>
     <string name="address">Adress</string>
-    <!-- required -->
+    <!-- required client  -->
     <string name="fName_required">First name is Required</string>
     <string name="lName_required">Last name is Required</string>
     <string name="paswd_required">password is Required</string>
+    <string name="age_required">Age is Required</string>
     <string name="paswd_lenght">Min password length should be 6 characters !</string>
     <string name="email_adress_required">Email Adress is Required</string>
     <string name="email_not_valid">Please provide a valide email</string>
     <string name="phone_required">Phone number is Required</string>
+
     <string name="cl_registered">Client has been registered successfuly</string>
     <string name="cl_not_registered">Failed to register ! Try again</string>
+    <string name="choosesYourWeeklySc">Chooses your weekly schedule</string>
+    <string name="error_toast_msg">Please make sur to fill all requiered fields</string>
+
+    <!-- required Resto   -->
+    <string name="nameResto_required">the name is Required</string>
+    <string name="adress_required">Adress location is Required</string>
+    <string name="city_required">City is Required</string>
+
+    <string name="field_required">This field is Required</string>
+
     <!-- Weekly days -->
     <string name="day">Day</string>
     <string name="opHour">Openning hour</string>
@@ -105,5 +118,13 @@
         <item>Planning</item>
         <item>Notifications</item>
         <item>Program</item>
+    </string-array>
+
+    <!--Array list for spinner -->
+    <string-array name="spinner_type_of_vehicule">
+        <item>Scoter</item>
+        <item>Car</item>
+        <item>Bicycle</item>
+        <item>Motocycle</item>
     </string-array>
 </resources>

@@ -30,6 +30,8 @@ public class ClientRegisterActivity extends AppCompatActivity {
         edt_email=findViewById(R.id.email_adress);
         edt_phone=findViewById(R.id.edt_numTel);
         edt_password=findViewById(R.id.edt_pass);
+        
+        progressBar=findViewById(R.id.progressBar_register);
 
         //initialize Firebase auth
         clientAuth=FirebaseAuth.getInstance();
@@ -40,14 +42,16 @@ public class ClientRegisterActivity extends AppCompatActivity {
 
         Button bttRegister= findViewById(R.id.next);
         bttRegister.setOnClickListener(View->{
-            registerUser();
-            startActivity(new Intent(ClientRegisterActivity.this, ClientMenuActivity.class));
+            if(registerUser())
+                startActivity(new Intent(ClientRegisterActivity.this, ClientMenuActivity.class));
+            else
+                Toast.makeText(this,getString(R.string.error_toast_msg), Toast.LENGTH_SHORT).show();
+
         });
 
-        progressBar=findViewById(R.id.progressBar_register);
 
     }
-    private void registerUser(){
+    private boolean registerUser(){
         String fName,lName,emailAdress,phoneNumber,passwordString;
 
         fName=edt_firstName.getText().toString();
@@ -60,37 +64,37 @@ public class ClientRegisterActivity extends AppCompatActivity {
         if(fName.isEmpty()){
             edt_firstName.setError(getString(R.string.fName_required));
             edt_firstName.requestFocus();
-            return;
+            return false;
         }
         if(lName.isEmpty()){
             edt_lastName.setError(getString(R.string.lName_required));
             edt_lastName.requestFocus();
-            return;
+            return false;
         }
         if(emailAdress.isEmpty()){
             edt_email.setError(getString(R.string.email_adress_required));
             edt_email.requestFocus();
-            return;
+            return false;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(emailAdress).matches()){
             edt_email.setError(getString(R.string.email_not_valid));
             edt_email.requestFocus();
-            return;
+            return false;
         }
         if(phoneNumber.isEmpty()){
             edt_phone.setError(getString(R.string.phone_required));
             edt_phone.requestFocus();
-            return;
+            return false;
         }
         if(passwordString.isEmpty()){
             edt_password.setError(getString(R.string.paswd_required));
             edt_password.requestFocus();
-            return;
+            return false;
         }
         if(passwordString.length() < 6){
             edt_password.setError(getString(R.string.paswd_lenght));
             edt_password.requestFocus();
-            return;
+            return false;
         }
 
         ///------------
@@ -98,28 +102,28 @@ public class ClientRegisterActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         clientAuth.createUserWithEmailAndPassword(emailAdress,passwordString)
-                .addOnCompleteListener(task -> {
-                    if(task.isSuccessful()){
-                        //so we create a client object
-                        Client client= new Client(fName,lName,phoneNumber,emailAdress,passwordString);
-                        FirebaseDatabase.getInstance().getReference("Client")
-                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                .setValue(client).addOnCompleteListener(task1 -> {
-                                    if(task1.isSuccessful()){
-                                        Toast.makeText(ClientRegisterActivity.this,getString(R.string.cl_registered), Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
-                                        //redirect to login layout
-                                    }else {
-                                        Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                });
-                    }else{
-                        Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
-                        progressBar.setVisibility(View.GONE);
-                    }
+                  .addOnCompleteListener(task -> {
+                        if(task.isSuccessful()){
+                            //so we create a client object
+                            Client client= new Client(fName,lName,phoneNumber,emailAdress,passwordString);
+                            FirebaseDatabase.getInstance().getReference("Client")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(client).addOnCompleteListener(task1 -> {
+                                        if(task1.isSuccessful()){
+                                            Toast.makeText(ClientRegisterActivity.this,getString(R.string.cl_registered), Toast.LENGTH_SHORT).show();
+                                            progressBar.setVisibility(View.GONE);
+                                            //redirect to login layout
+                                        }else {
+                                            Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
+                                            progressBar.setVisibility(View.GONE);
+                                        }
+                                    });
+                        }else{
+                            Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
+                        }
                 });
 
-
+        return true;
     }
 }

@@ -1,68 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".driver.DriverLoginActivity">
-
-    <EditText
-        android:id="@+id/email_adress"
-        android:layout_width="342dp"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        android:text="Login Now..."
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="25dp"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="342dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="64dp"
         android:text="@string/email_address"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
 
     <EditText
-        android:id="@+id/pass"
-        android:layout_width="342dp"
+        android:id="@+id/email_adress"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
 
     <TextView
         android:id="@+id/password"
-        android:layout_width="342dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="38dp"
         android:text="@string/password"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_adress" />
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
 
-    <TextView
-        android:id="@+id/iforgetPass"
-        android:layout_width="342dp"
+
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
-        android:text="@string/iforget"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
+        android:inputType="textPassword"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+    <ProgressBar
+        android:id="@+id/progBarre_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
 
     <Button
         android:id="@+id/next"
@@ -70,12 +68,21 @@
         android:layout_height="wrap_content"
         android:text="@string/go"
         android:backgroundTint="@color/rose"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iforgetPass"
-        app:layout_constraintVertical_bias="0.47" />
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
+
+    <TextView
+        android:id="@+id/iforgetPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/iforget"
+        android:textStyle="bold"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</TableLayout>

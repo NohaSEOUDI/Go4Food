@@ -5,6 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".resto.RestoWeelyPlanningActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choosesYourWeeklySc"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        />
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -96,14 +106,14 @@
             />
 
         <EditText
-            android:id="@+id/et_debTues"
+            android:id="@+id/et_deb2"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_weight="1"
             android:inputType="time" />
         <EditText
-            android:id="@+id/et_finTues"
+            android:id="@+id/et_fin2"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -131,14 +141,14 @@
             />
 
         <EditText
-            android:id="@+id/et_debWend"
+            android:id="@+id/et_deb3"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_weight="1"
             android:inputType="time" />
         <EditText
-            android:id="@+id/et_finWend"
+            android:id="@+id/et_fin3"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -165,14 +175,14 @@
             />
 
         <EditText
-            android:id="@+id/et_debThrusday"
+            android:id="@+id/et_deb4"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_weight="1"
             android:inputType="time" />
         <EditText
-            android:id="@+id/et_finThrusday"
+            android:id="@+id/et_fin4"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -199,14 +209,14 @@
             />
 
         <EditText
-            android:id="@+id/et_debFriday"
+            android:id="@+id/et_deb5"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_weight="1"
             android:inputType="time" />
         <EditText
-            android:id="@+id/et_finFriday"
+            android:id="@+id/et_fin5"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -233,14 +243,14 @@
             />
 
         <EditText
-            android:id="@+id/et_debSaturday"
+            android:id="@+id/et_deb6"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_weight="1"
             android:inputType="time" />
         <EditText
-            android:id="@+id/et_finSaturday"
+            android:id="@+id/et_fin6"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -267,14 +277,14 @@
             />
 
         <EditText
-            android:id="@+id/et_debSunday"
+            android:id="@+id/et_deb7"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_weight="1"
             android:inputType="time" />
         <EditText
-            android:id="@+id/et_finSunday"
+            android:id="@+id/et_fin7"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -282,9 +292,16 @@
             android:inputType="time" />
     </TableRow>
 
+    <ProgressBar
+        android:id="@+id/pb_round"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+
     <Button
         android:id="@+id/btt_save"
-        android:layout_marginTop="50dp"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/clearYellow"
