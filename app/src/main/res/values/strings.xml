@@ -97,7 +97,7 @@
     <string name="totalPrice">Total price</string>
     <string name="description">Description</string>
     <string name="uploadPhoto">Upload Photo</string>
-    <string name="add_items">Add</string>
+    <string name="add_items">Add New Item</string>
 
     <!-- Resto - Ietms Setting account -->
     <string-array name="setting_item_name">

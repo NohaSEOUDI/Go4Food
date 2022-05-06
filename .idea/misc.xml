@@ -18,11 +18,15 @@
         <entry key="app/src/main/res/layouts/client/layout/activity_client_menu.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/client/layout/activity_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/client/layout/activity_register_client.xml" value="0.2" />
+        <entry key="app/src/main/res/layouts/client/layout/fragment_client__home_.xml" value="0.1" />
+        <entry key="app/src/main/res/layouts/client/layout/fragment_client_setting.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/client/layout/viewholder_category_item.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_interface.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_login.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_register.xml" value="0.33" />
+        <entry key="app/src/main/res/layouts/driver/layout/fragment_driver_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layouts/driver/layout/fragment_driver_setteings.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_account_circle.xml" value="0.17" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_event_note.xml" value="0.1825" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_history.xml" value="0.2015" />
@@ -39,7 +43,7 @@
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_added_done.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_added_error.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_menu.xml" value="0.33" />
-        <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_one_product.xml" value="0.18" />
+        <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_one_product.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_select_option.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_weekly_planning.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_settings.xml" value="0.1" />

@@ -7,7 +7,7 @@
     tools:context=".driver.DriverMenuActivity">
 
     <FrameLayout
-        android:id="@+id/fragment_holder"
+        android:id="@+id/driver_fragment_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomAppBar"/>
@@ -20,7 +20,7 @@
         android:backgroundTint="@color/roseClaire">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navigButt"
+            android:id="@+id/drivernavigButt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"

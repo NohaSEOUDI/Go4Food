@@ -4,9 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="3dp"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="32dp"
     android:paddingBottom="3dp">
-    <!-- pour mettre un peut d'interaction avec l'ajout de produit -->
+    <!-- pour mettre un peut d'interaction avec l'ajout de Produit -->
     <!-- amélioration ajout d'spinner au lieu d'un editText-->
+    <!-- on insére le nom d'item(Produit), sur la coté droite on peut enlever l'et -->
     <TableRow
         android:id="@+id/tr_item_added"
         android:layout_width="match_parent"

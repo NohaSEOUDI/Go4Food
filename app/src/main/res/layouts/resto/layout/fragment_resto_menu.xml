@@ -58,32 +58,7 @@
             android:inputType="text"
             />
     </com.google.android.material.textfield.TextInputLayout>
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
-        >
-        <TextView
-            android:id="@+id/tv_listItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/listOfItems"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            />
-        <Button
-            android:id="@+id/btt_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/clearYellow"
-            android:text="@string/add_items"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/ic_add"/>
 
-
-    </TableRow>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -140,7 +115,25 @@
             android:maxLength="20"
             />
     </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/table_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:orientation="vertical" />
 
+    <Button
+        android:id="@+id/btt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="@color/clearYellow"
+        android:text="@string/add_items"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/ic_add"/>
 
     <Button
         android:id="@+id/btt_save"

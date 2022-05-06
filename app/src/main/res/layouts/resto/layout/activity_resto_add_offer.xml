@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".resto.RestoAddOfferActivity">
 
-
+<!-- c'est l'activité qui permet d'heberger les fragement qui se charge d'ajout de Produit -->
     <FrameLayout
         android:id="@+id/frameLayout"
         android:name="fr.nohas.go4food.RestSelectOptionFragment"

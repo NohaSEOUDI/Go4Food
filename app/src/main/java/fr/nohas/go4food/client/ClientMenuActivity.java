@@ -1,46 +1,43 @@
 package fr.nohas.go4food.client;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.widget.LinearLayout;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-
-import fr.nohas.go4food.Adaptor.CategoryAdaptor;
-import fr.nohas.go4food.Domaine.CategorieDomaine;
 import fr.nohas.go4food.R;
 
+
 public class ClientMenuActivity extends AppCompatActivity {
-    private RecyclerView.Adapter adapteur;
-    private RecyclerView recyclerViewcategorieList;
+    private ClientHomeFragment clientHomeFragment;
+    private ClientSettingsFragment clientSettingsFragment;
+    BottomNavigationView bottomNavig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_menu);
-        BottomNavigationView btt_Navig = findViewById(R.id.navigButt);
-        btt_Navig.setBackground(null);
-        recyclerViewcategorie();
-    }
-    private void recyclerViewcategorie(){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
-        recyclerViewcategorieList = findViewById(R.id.rVCategorie);
-        recyclerViewcategorieList.setLayoutManager(linearLayoutManager);
+        bottomNavig = findViewById(R.id.navigButtClient);
+        bottomNavig.setBackground(null); //pour enlever le background
 
-        ArrayList<CategorieDomaine> categorieDomaines=new ArrayList<>();
-        categorieDomaines.add(new CategorieDomaine("Pizza","cat_1"));
-        categorieDomaines.add(new CategorieDomaine("Burger","cat_2"));
-        categorieDomaines.add(new CategorieDomaine("Hot Dog","cat_3"));
-        categorieDomaines.add(new CategorieDomaine("Tacos","cat_4"));
-        categorieDomaines.add(new CategorieDomaine("Donut","cat_5"));
-        categorieDomaines.add(new CategorieDomaine("Drink","cat_6"));
 
-        adapteur=new CategoryAdaptor(categorieDomaines);
-        recyclerViewcategorieList.setAdapter(adapteur);
+        //we inizalize all our fragment, we will add others later
+        clientHomeFragment=new ClientHomeFragment();
+        clientSettingsFragment=new ClientSettingsFragment();
+
+        makeCurrentFragment(clientHomeFragment); // by default we get home page in first
+
+        bottomNavig.setOnItemSelectedListener(item -> {
+            //home , settings or other
+            switch(item.getItemId()){
+                case R.id.id_home:  makeCurrentFragment(clientHomeFragment); return true;
+                case R.id.id_account:  makeCurrentFragment(clientSettingsFragment); return true;
+            }
+            return false;
+        });
     }
+
+    private void makeCurrentFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.client_main_fragment_holder,fragment).commit();
+    }
+
 }

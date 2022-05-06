@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import fr.nohas.go4food.R;
@@ -22,6 +25,10 @@ public class RestoMenuFragment extends Fragment {
     EditText edName,edVariation,edPrice,edDescription;
     Button buttonValidation,addItem;
     ActivityResultLauncher<String> mTakePhoto; //to upload photo from galerie
+
+    //pour le mécanisme d'ajout d'item
+    LinearLayout layoutList;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,6 +42,7 @@ public class RestoMenuFragment extends Fragment {
         textViewPic = rootView.findViewById(R.id.tv_uploadPhoto);
         buttonValidation = rootView.findViewById(R.id.btt_save);
         addItem = rootView.findViewById(R.id.btt_add);
+        layoutList = rootView.findViewById(R.id.table_list); //ajout d'item
 
         //3) to get image
         mTakePhoto = registerForActivityResult(
@@ -47,10 +55,28 @@ public class RestoMenuFragment extends Fragment {
             mTakePhoto.launch("image/*"); //all images on data
         });
 
-        //mécanisem d'ajout d'item à la demande
+        //mécanisme d'ajout d'item à la demande
 
-
+        addItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addItem(view);
+            }
+        });
 
         return rootView;
+    }
+    private void addItem(View v){
+        View addViewItem= getLayoutInflater().inflate(R.layout.resto_row_add_item,null,false);
+        EditText editText = addViewItem.findViewById(R.id.et_item);
+        ImageView imageClose = addViewItem.findViewById(R.id.imv_close);
+        imageClose.setOnClickListener(View -> {
+            removeItem(addViewItem);
+        });
+        layoutList.addView(addViewItem);
+    }
+
+    private void removeItem(View v){
+        layoutList.removeView(v);
     }
 }
