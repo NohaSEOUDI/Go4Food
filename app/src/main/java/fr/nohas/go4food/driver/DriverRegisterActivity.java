@@ -159,24 +159,24 @@ public class DriverRegisterActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         driverAuth.createUserWithEmailAndPassword(emailAdressStr,mdpStr)
                 .addOnCompleteListener(task -> {
-                   if(task.isSuccessful()){
-                    //   String d_nom, String d_prenom,String d_city, String d_adress, String d_adressmail, String d_numTel, String d_password, int d_age,TypeVehicule d_typeVehicule, Boolean d_receve_delivery_commandes)
-                       Driver driver = new Driver(fNameStr,lNameStr,cityStr,adressStr,emailAdressStr,phoneNumberStr,mdpStr,ageInInteger,spinnerStr,radiobtnToBool);
-                       FirebaseDatabase.getInstance().getReference("Driver")
-                               .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                               .setValue(driver).addOnCompleteListener(task1 -> {
-                                   if(task1.isSuccessful()){
-                                       Toast.makeText(this, "Register successfully", Toast.LENGTH_SHORT).show();
-                                       progressBar.setVisibility(View.GONE);
-                                   }else {
-                                       Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-                                       progressBar.setVisibility(View.GONE);
-                                   }
-                               });
-                   }else{
-                       Toast.makeText(this, "Error again", Toast.LENGTH_SHORT).show();
-                       progressBar.setVisibility(View.GONE);
-                   }
+                    if(task.isSuccessful()){
+                        //   String d_nom, String d_prenom,String d_city, String d_adress, String d_adressmail, String d_numTel, String d_password, int d_age,TypeVehicule d_typeVehicule, Boolean d_receve_delivery_commandes)
+                        Driver driver = new Driver(fNameStr,lNameStr,cityStr,adressStr,emailAdressStr,phoneNumberStr,mdpStr,ageInInteger,spinnerStr,radiobtnToBool);
+                        FirebaseDatabase.getInstance().getReference("Driver")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(driver).addOnCompleteListener(task1 -> {
+                            if(task1.isSuccessful()){
+                                Toast.makeText(this, "Register successfully", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }else {
+                                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }
+                        });
+                    }else{
+                        Toast.makeText(this, "Error again", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
                 });
         return true;
     }

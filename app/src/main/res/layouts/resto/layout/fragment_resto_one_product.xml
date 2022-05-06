@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".resto.RestoOneProductFragment">
+    tools:context=".resto.fragments.RestoOneProductFragment">
 
     <!-- Fragment to add one product -->
     <TableLayout
@@ -21,21 +22,25 @@
             android:textSize="25dp"
         />
        <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/uploadPhoto"
-        android:textStyle="bold"
-        android:layout_marginStart="32dp"
-           android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+            android:id="@+id/tv_uploadPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/uploadPhoto"
+            android:textStyle="bold"
+           android:drawablePadding="3dp"
+           android:background="@color/clearYellow2"
+           android:drawableLeft="@drawable/ic_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
        />
         <ImageView
             android:id="@+id/et_photo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:inputType="text"
+
         />
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -86,7 +91,7 @@
         android:hint="@string/variations"
         >
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_variations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,7 +110,7 @@
         android:layout_marginTop="32dp"
         android:hint="@string/description"
         >
-    <EditText
+       <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

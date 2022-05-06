@@ -26,7 +26,6 @@ public class ClientMenuActivity extends AppCompatActivity {
         BottomNavigationView btt_Navig = findViewById(R.id.navigButt);
         btt_Navig.setBackground(null);
         recyclerViewcategorie();
-
     }
     private void recyclerViewcategorie(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);

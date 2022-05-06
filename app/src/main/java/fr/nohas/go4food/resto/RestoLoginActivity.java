@@ -48,8 +48,8 @@ public class RestoLoginActivity extends AppCompatActivity {
             restoLogin();
         });
 
-      passwordForgetten.setOnClickListener(View->{
-             startActivity(new Intent(RestoLoginActivity.this, PasswordForgotten.class));
+        passwordForgetten.setOnClickListener(View->{
+            startActivity(new Intent(RestoLoginActivity.this, PasswordForgotten.class));
         });
 
         restoSignInAuth=FirebaseAuth.getInstance();

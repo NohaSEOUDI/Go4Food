@@ -87,7 +87,7 @@ public class ClientLoginActivity extends AppCompatActivity {
                             startActivity(new Intent(ClientLoginActivity.this, ClientMenuActivity.class));
                             roundProgBarre.setVisibility(View.GONE);
                         }else{
-                            Toast.makeText(ClientLoginActivity.this, "Failed to login !please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ClientLoginActivity.this, "Failed to login ! please check your connexion", Toast.LENGTH_SHORT).show();
                             roundProgBarre.setVisibility(View.GONE);
                         }
                     }

@@ -119,7 +119,7 @@ public class ClientRegisterActivity extends AppCompatActivity {
                                         }
                                     });
                         }else{
-                            Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ClientRegisterActivity.this, getString(R.string.cl_not_registered), Toast.LENGTH_SHORT).show(); //rajoute plus de param icii !!!
                             progressBar.setVisibility(View.GONE);
                         }
                 });

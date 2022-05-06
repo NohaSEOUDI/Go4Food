@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".resto.RestoMenuActivity">
 
+    <!-- Fragments qui sera remplacer selon le choix du button  -->
+    <FrameLayout
+        android:id="@+id/main_fragment_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomAppBar"/>
+
+    <!-- this resource is just for the nav bottom bar  -->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
@@ -27,13 +35,12 @@
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/flab"
+        android:id="@+id/flabActionbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/darkYellow"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/bottomAppBar"
-
         />
 
 

@@ -53,12 +53,12 @@ public class RestoRegisterActivity extends AppCompatActivity {
         String restoNameStr,adressStr,cityStr,mailStr,passwordStr,phoneNumberStr;
 
         //get data from EditText ointo String variables
-           restoNameStr = restoName.getText().toString();
-           adressStr = adress.getText().toString();
-           cityStr = city.getText().toString();
-           mailStr = mail.getText().toString();
-           passwordStr = password.getText().toString();
-           phoneNumberStr = phoneNumber.getText().toString();
+        restoNameStr = restoName.getText().toString();
+        adressStr = adress.getText().toString();
+        cityStr = city.getText().toString();
+        mailStr = mail.getText().toString();
+        passwordStr = password.getText().toString();
+        phoneNumberStr = phoneNumber.getText().toString();
 
         //check if user fill all the fields before sending data to firebase
         if(restoNameStr.isEmpty()){
@@ -114,15 +114,15 @@ public class RestoRegisterActivity extends AppCompatActivity {
                         FirebaseDatabase.getInstance().getReference("Resto")
                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                 .setValue(resto).addOnCompleteListener(task1 -> {
-                                    if(task1.isSuccessful()){
-                                        Toast.makeText(RestoRegisterActivity.this, "Resto has been registred :)", Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
-                                        //redirect to login layout
-                                    }else{
-                                        Toast.makeText(RestoRegisterActivity.this, "Error ! ", Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                });
+                            if(task1.isSuccessful()){
+                                Toast.makeText(RestoRegisterActivity.this, "Resto has been registred :)", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                                //redirect to login layout
+                            }else{
+                                Toast.makeText(RestoRegisterActivity.this, "Error ! ", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }
+                        });
                     }else{
                         Toast.makeText(RestoRegisterActivity.this, "Error occuered !", Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);

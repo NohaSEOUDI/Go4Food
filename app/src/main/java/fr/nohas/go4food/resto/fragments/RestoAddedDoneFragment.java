@@ -1,4 +1,4 @@
-package fr.nohas.go4food.resto;
+package fr.nohas.go4food.resto.fragments;
 
 import android.os.Bundle;
 

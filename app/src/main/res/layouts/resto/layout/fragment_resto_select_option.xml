@@ -3,32 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resto.RestoSelectOptionFragment">
+    tools:context=".resto.fragments.RestoSelectOptionFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:layout_marginStart="25dp"
         android:text="@string/pleaseSelect"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:textStyle="bold"/>
-
-    <CheckBox
-        android:id="@+id/cb_menu"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/rb_group"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/menu"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="25dp"
-        android:textStyle="bold" />
-    <CheckBox
-        android:id="@+id/cb_oneProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:text="@string/oneProduct"
-        android:textStyle="bold" />
+        >
+        <RadioButton
+            android:id="@+id/rb_oneProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="@string/oneProduct"
+            android:textStyle="bold"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:layout_marginStart="25dp"
+            android:textStyle="bold" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btt_save"

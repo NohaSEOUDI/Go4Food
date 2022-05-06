@@ -44,7 +44,7 @@ public class DriverLoginActivity extends AppCompatActivity {
             driverLogin();
         });
         passwordForgetten.setOnClickListener(View->{
-             startActivity(new Intent(DriverLoginActivity.this, PasswordForgotten.class));
+            startActivity(new Intent(DriverLoginActivity.this, PasswordForgotten.class));
         });
         driverSignInAuth=FirebaseAuth.getInstance();
     }

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:paddingTop="3dp"
     android:paddingBottom="3dp">
+    <!-- pour mettre un peut d'interaction avec l'ajout de produit -->
     <!-- amélioration ajout d'spinner au lieu d'un editText-->
     <TableRow
         android:id="@+id/tr_item_added"
