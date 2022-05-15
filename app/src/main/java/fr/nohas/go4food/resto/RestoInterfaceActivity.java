@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import fr.nohas.go4food.R;
-
+//c'est la 1er page de l'interface restaurateur : soit il s'inscrit soit il se connecte
 public class RestoInterfaceActivity extends AppCompatActivity {
     Button btt_register,btt_login;
     @Override

@@ -17,15 +17,14 @@ import com.google.android.material.navigation.NavigationBarView;
 import fr.nohas.go4food.R;
 import fr.nohas.go4food.resto.fragments.SettingsFragment;
 import fr.nohas.go4food.resto.fragments.HomeFragment;
-
+//page de home où il ya la buttom bar jaunne
 public class RestoMenuActivity extends AppCompatActivity {
     private HomeFragment homeFragment;
     private SettingsFragment settingsFragment;
     BottomNavigationView btt_Navig;
     FloatingActionButton flap_action_button; // round button
 
-    public RestoMenuActivity() {
-    }
+    public RestoMenuActivity() { }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

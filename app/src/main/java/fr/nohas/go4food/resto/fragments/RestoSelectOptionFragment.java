@@ -14,7 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import fr.nohas.go4food.R;
-//fragmenet de selection de choix
+//fragmenet de selection de choix entre formule(Menu complet) et une seule produit
 public class RestoSelectOptionFragment extends Fragment {
     RadioGroup radioGroup;
     RadioButton radioButton;
@@ -35,7 +35,7 @@ public class RestoSelectOptionFragment extends Fragment {
 
 
             if(radioButton.getText()==getString(R.string.menu)) {
-                fragment2= new RestoMenuFragment();
+                fragment2= new RestoMenuFragment(); // R.id.frameLayout c'est le frameLayout qui se trouve dans Mainactivity
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,fragment2).addToBackStack(null).commit(); // pour retourner au fragement précédent :o
                 //Toast.makeText(getActivity(), "Menu", Toast.LENGTH_SHORT).show();
             }

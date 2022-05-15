@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import fr.nohas.go4food.R;
-    /* Setting resto activity containes a list of pramaeters
+    /* Setting resto activity containes a list of parameters
     * */
 public class RestoSettingActivity extends AppCompatActivity {
 

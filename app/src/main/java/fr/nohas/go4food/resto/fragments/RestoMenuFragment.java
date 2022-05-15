@@ -18,7 +18,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import fr.nohas.go4food.R;
-
+//pour déposer un menys complets comme offre
 public class RestoMenuFragment extends Fragment {
     ImageView productPic;
     TextView textViewPic;//et_photo

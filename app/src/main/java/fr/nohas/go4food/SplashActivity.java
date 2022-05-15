@@ -10,7 +10,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
-
+//page de splash:
 public class SplashActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN_TIME= 2000;

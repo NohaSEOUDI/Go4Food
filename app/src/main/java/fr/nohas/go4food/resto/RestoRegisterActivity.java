@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import fr.nohas.go4food.R;
 import fr.nohas.go4food.driver.DriverLoginActivity;
 import fr.nohas.go4food.driver.DriverRegisterActivity;
-
+//page d'inscription :
 public class RestoRegisterActivity extends AppCompatActivity {
     private FirebaseAuth restoAuth;
     private EditText restoName,adress,city,mail,password,phoneNumber;

@@ -25,6 +25,7 @@ import fr.nohas.go4food.client.ClientMenuActivity;
 import fr.nohas.go4food.driver.DriverLoginActivity;
 import fr.nohas.go4food.driver.DriverMenuActivity;
 
+//page de connexion : mail et mot de passe
 public class RestoLoginActivity extends AppCompatActivity {
     TextView passwordForgetten;
     Button next;

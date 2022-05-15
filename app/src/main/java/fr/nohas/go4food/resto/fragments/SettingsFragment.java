@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 
 import fr.nohas.go4food.R;
 
-/**
- */
+//page où on peut gérer les paramétres
 public class SettingsFragment extends Fragment {
 
     @Override

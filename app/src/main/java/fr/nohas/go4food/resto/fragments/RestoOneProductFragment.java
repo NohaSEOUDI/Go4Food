@@ -45,15 +45,17 @@ import fr.nohas.go4food.resto.Produit;
 //tt ça doit être enregister dans la base de donénes !!
 // on stocke la photo dans storage
 // les données sont dans realTimeDatabase
+//page pour choisir une seule produit et l'enregister dans la bdd
 public class RestoOneProductFragment extends Fragment {
+    Fragment nextFragment;
     ImageView productPic;
-    TextView textViewPic;//et_photo
+    TextView textViewPic;
     EditText edName,edVariation,edPrice,edDescription;
     Button buttonValidation;
     ActivityResultLauncher<String> mTakePhoto; //to upload photo from galerie
 
     //pour stocker dans la base de données
-    FirebaseStorage storageReference; // ici on stocke le dossier image dans Storage
+    FirebaseStorage storageReference; // ici on stocke l'image dans Storage
     FirebaseFirestore db;
     ProgressDialog progressDialog;
     Uri imageUri;
@@ -75,6 +77,7 @@ public class RestoOneProductFragment extends Fragment {
         progressDialog = new ProgressDialog(getActivity());
 
         storageReference= FirebaseStorage.getInstance();
+
         //initialize cloud FireStore
         db = FirebaseFirestore.getInstance();
 
@@ -96,9 +99,8 @@ public class RestoOneProductFragment extends Fragment {
             mTakePhoto.launch("image/*"); //all images on data
         });
 
-
         buttonValidation = rootView.findViewById(R.id.btt_save);
-        //on stocke dans la bdd
+        //quand on click sur le button ,on stocke les données dans la bdd
         buttonValidation.setOnClickListener(View->{
             uploadImage();
         });
@@ -134,27 +136,28 @@ public class RestoOneProductFragment extends Fragment {
                         product.put("variation", variationStr);
                         product.put("prix", priceDouble);
 
-                        // Add a new document with a generated ID
-                        db.collection("users")
+                        // Add a new document with a generated ID query to store Data
+                        db.collection("Product")
                                 .add(product)
                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                     @Override
                                     public void onSuccess(DocumentReference documentReference) {
                                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                                        Toast.makeText(getActivity(), "ok", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(), "successfully registered :) ", Toast.LENGTH_SHORT).show();
+                                        //ici on fait une rédirection vers une autre page yoo
+                                        nextFragment=new RestoAddedDoneFragment();
+                                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,nextFragment).addToBackStack(null).commit();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
                                         Log.w(TAG, "Error adding document", e);
-                                        Toast.makeText(getActivity(), "pas ok!!!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(), "Error adding document!"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        nextFragment=new RestoAddedErrorFragment();
+                                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,nextFragment).addToBackStack(null).commit();
                                     }
                                 });
-
-                      //  product = new Produit(task.getResult().toString(),nameStr,descriptionStr,variationStr,priceDouble);
-                      //  String ImageUploadId =  databaseReference.push().getKey();
-                       // databaseReference.child(ImageUploadId).setValue(product);
                     }else{
                         //failed
                         Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();

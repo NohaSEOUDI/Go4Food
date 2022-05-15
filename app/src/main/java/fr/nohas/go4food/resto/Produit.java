@@ -1,5 +1,6 @@
 package fr.nohas.go4food.resto;
 
+//classe produit pour enregister un produit dans la bdd
 public class Produit {
     private String photo,name,description,variation;
     private double prix;
@@ -9,8 +10,9 @@ public class Produit {
         this.name = name;
         this.description = description;
         this.variation = variation;
+        this.prix = prix;
     }
-
+    //--------------------getters---------------------
     public String getPhoto() {
         return photo;
     }
@@ -31,7 +33,7 @@ public class Produit {
         return prix;
     }
 
-    //--------------------setters
+    //--------------------setters---------------------
 
     public void setPhoto(String photo) {
         this.photo = photo;

@@ -1,5 +1,5 @@
 package fr.nohas.go4food.resto;
-
+//classe pour enregistrer un restaurateur
 public class Resto {
     public String r_nom, r_adresse, r_mail, r_city, r_password, r_phone;
     //public R_Planning horaireDeTravail;

@@ -39,7 +39,8 @@
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_select_choise.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_setting.xml" value="0.5" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_weely_planning.xml" value="0.33" />
-        <entry key="app/src/main/res/layouts/resto/layout/fragment_home.xml" value="0.10144927536231885" />
+        <entry key="app/src/main/res/layouts/resto/layout/fragment_desc_product.xml" value="0.25" />
+        <entry key="app/src/main/res/layouts/resto/layout/fragment_home.xml" value="0.15" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_added_done.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_added_error.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_menu.xml" value="0.33" />
@@ -48,6 +49,7 @@
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_weekly_planning.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/resto_row_add_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layouts/resto/layout/resto_row_item_product.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/resto/layout/resto_row_item_setting.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_app_bar.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/bottom_app_bar_client.xml" value="0.19375" />
