@@ -28,35 +28,43 @@
         <entry key="app/src/main/res/layouts/driver/layout/fragment_driver_home.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/driver/layout/fragment_driver_setteings.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_account_circle.xml" value="0.17" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_add.xml" value="0.1435" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_calendar_month.xml" value="0.1435" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_circle_notifications.xml" value="0.1435" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_close.xml" value="0.1435" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_event_note.xml" value="0.1825" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_history.xml" value="0.2015" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_notifications.xml" value="0.1435" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_rule.xml" value="0.1855" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_shopping_cart.xml" value="0.1435" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_add_offer.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_interface.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_login.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_register.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_select_choise.xml" value="0.1" />
-        <entry key="app/src/main/res/layouts/resto/layout/activity_resto_setting.xml" value="0.5" />
+        <entry key="app/src/main/res/layouts/resto/layout/activity_resto_setting.xml" value="0.3875" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_weely_planning.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_desc_product.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_home.xml" value="0.15" />
+        <entry key="app/src/main/res/layouts/resto/layout/fragment_next_resources.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_added_done.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_added_error.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_menu.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_one_product.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_select_option.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/resto/layout/fragment_resto_weekly_planning.xml" value="0.25" />
-        <entry key="app/src/main/res/layouts/resto/layout/fragment_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layouts/resto/layout/fragment_settings.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/resto/layout/resto_row_add_item.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/resto/layout/resto_row_item_product.xml" value="0.18" />
-        <entry key="app/src/main/res/layouts/resto/layout/resto_row_item_setting.xml" value="0.1" />
+        <entry key="app/src/main/res/layouts/resto/layout/resto_row_item_setting.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_app_bar.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/bottom_app_bar_client.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/bottom_app_bar_driver.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/bottom_app_bar_resto.xml" value="0.16" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1525" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.25" />
       </map>
     </option>
   </component>

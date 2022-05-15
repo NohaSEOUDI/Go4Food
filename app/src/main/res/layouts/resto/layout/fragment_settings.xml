@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".resto.fragments.SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Here we add the list of settings  -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/settings_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello Settings fragment" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
