@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import fr.nohas.go4food.R;
+import fr.nohas.go4food.client.dailyMeal.ClientDailyMealFragment;
 
 
 public class ClientMenuActivity extends AppCompatActivity {
     private ClientHomeFragment clientHomeFragment;
     private ClientSettingsFragment clientSettingsFragment;
+    private ClientDailyMealFragment clientDailyMealFragment;
     BottomNavigationView bottomNavig;
 
     @Override
@@ -21,8 +23,9 @@ public class ClientMenuActivity extends AppCompatActivity {
 
 
         //we inizalize all our fragment, we will add others later
-        clientHomeFragment=new ClientHomeFragment();
-        clientSettingsFragment=new ClientSettingsFragment();
+        clientHomeFragment = new ClientHomeFragment(); // fragment de home
+        clientSettingsFragment = new ClientSettingsFragment(); // fragment de settings
+        clientDailyMealFragment = new ClientDailyMealFragment();
 
         makeCurrentFragment(clientHomeFragment); // by default we get home page in first
 
@@ -30,6 +33,8 @@ public class ClientMenuActivity extends AppCompatActivity {
             //home , settings or other
             switch(item.getItemId()){
                 case R.id.id_home:  makeCurrentFragment(clientHomeFragment); return true;
+                case R.id.id_carts:  makeCurrentFragment(clientDailyMealFragment); return true;
+              //  case R.id.id_search:  makeCurrentFragment(clientDailyMealFragment); return true;
                 case R.id.id_account:  makeCurrentFragment(clientSettingsFragment); return true;
             }
             return false;

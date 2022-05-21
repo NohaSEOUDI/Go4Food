@@ -14,4 +14,8 @@
     <color name="clearYellow">#FFAB3B</color>
     <color name="clearYellow2">#F4B868</color>
     <color name="darkYellow">#FF9508</color>
+    <!-- background -->
+    <color name="overlayBackground">#7f333639</color>
+    <color name="overlayActionBar">#0e0d0e</color>
+    <color name="overlayActionBar2">#201D20</color>
 </resources>

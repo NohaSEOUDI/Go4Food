@@ -3,64 +3,83 @@ package fr.nohas.go4food.client;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.nohas.go4food.Adaptor.HomeHorAdapter;
+import fr.nohas.go4food.Adaptor.HomeVerAdapter;
 import fr.nohas.go4food.R;
+import fr.nohas.go4food.client.interfaces.UpdateVerticalRec;
+import fr.nohas.go4food.client.models.HomeHorModel;
+import fr.nohas.go4food.client.models.HomeVerModel;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ClientHomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class ClientHomeFragment extends Fragment {
+/*Fragment qui contiend notre recycler view */
+public class ClientHomeFragment extends Fragment implements UpdateVerticalRec {
+    RecyclerView homeHorizontalRecyclerView,homeVerticalRecyclerView;
+    ArrayList<HomeHorModel> listHomeHorModels;
+    HomeHorAdapter homeHorAdapter;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    ///////////////////vertical
+    ArrayList<HomeVerModel> listhomeVerModels;
+    HomeVerAdapter homeVerAdapter;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View root= inflater.inflate(R.layout.fragment_client__home_, container, false);
+        homeHorizontalRecyclerView = root.findViewById(R.id.home_hor_recyclerView);
+        homeVerticalRecyclerView = root.findViewById(R.id.home_ver_recyclerView);
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+        //////////////////////////////Horizontal Recycler view
+        listHomeHorModels = new ArrayList<>();
 
-    public ClientHomeFragment() {
-        // Required empty public constructor
+        //à modifier
+        listHomeHorModels.add(new HomeHorModel(R.drawable.pizza_1,"Pizza"));
+        listHomeHorModels.add(new HomeHorModel(R.drawable.burger,"Burger"));
+        listHomeHorModels.add(new HomeHorModel(R.drawable.pizza_1,"Pizza"));
+        listHomeHorModels.add(new HomeHorModel(R.drawable.pizza_1,"Pizza"));
+        listHomeHorModels.add(new HomeHorModel(R.drawable.pizza_1,"Pizza"));
+        listHomeHorModels.add(new HomeHorModel(R.drawable.pizza_1,"Pizza"));
+
+        homeHorAdapter = new HomeHorAdapter(this,getActivity(),listHomeHorModels);
+        homeHorizontalRecyclerView.setAdapter(homeHorAdapter);
+        homeHorizontalRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
+        homeHorizontalRecyclerView.setHasFixedSize(true);
+        homeHorizontalRecyclerView.setNestedScrollingEnabled(false);
+
+        //////////////////////////////Vertical Recycler view
+        listhomeVerModels = new ArrayList<>();
+        /*à modifier
+        listhomeVerModels.add(new HomeVerModel(R.drawable.burger_king_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.pizza_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.pizza_hut,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.french_takos,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.burger_king_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.burger_king_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.burger_king_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.burger_king_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        listhomeVerModels.add(new HomeVerModel(R.drawable.burger_king_1,"Burger King","10:00 -23:00","4.9","Min - $34"));
+        */
+        homeVerAdapter = new HomeVerAdapter(getActivity(),listhomeVerModels);
+        homeVerticalRecyclerView.setAdapter(homeVerAdapter);
+        homeVerticalRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
+        //homeVerticalRecyclerView.setHasFixedSize(true);
+        //homeVerticalRecyclerView.setNestedScrollingEnabled(false);
+
+        return root;
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ClientHomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ClientHomeFragment newInstance(String param1, String param2) {
-        ClientHomeFragment fragment = new ClientHomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_client__home_, container, false);
+    public void callBack(int position, ArrayList<HomeVerModel> list) {
+        homeVerAdapter = new HomeVerAdapter(getContext(),list);
+        homeVerAdapter.notifyDataSetChanged();
+        homeVerticalRecyclerView.setAdapter(homeVerAdapter);
     }
 }
