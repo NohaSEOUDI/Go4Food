@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/category_backround.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/change_bg.xml" value="0.141" />
         <entry key="app/src/main/res/drawable/daily_meal_bg.xml" value="0.1195" />
@@ -26,6 +27,8 @@
         <entry key="app/src/main/res/layouts/client/layout/activity_detailed_daily_meal.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/client/layout/activity_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/client/layout/activity_register_client.xml" value="0.2" />
+        <entry key="app/src/main/res/layouts/client/layout/bottom_sheet_layout.xml" value="0.5684647302904564" />
+        <entry key="app/src/main/res/layouts/client/layout/bottom_shet_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/client/layout/daily_meal_item.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/client/layout/detailed_daily_meal_item.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/client/layout/fragment_client__home_.xml" value="0.22" />
