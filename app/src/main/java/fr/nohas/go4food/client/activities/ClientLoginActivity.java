@@ -1,4 +1,4 @@
-package fr.nohas.go4food.client;
+package fr.nohas.go4food.client.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

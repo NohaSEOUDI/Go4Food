@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import fr.nohas.go4food.client.ClientInterfaceActivity;
+import fr.nohas.go4food.client.activities.ClientInterfaceActivity;
 import fr.nohas.go4food.driver.DriverInterfaceActivity;
 import fr.nohas.go4food.resto.RestoInterfaceActivity;
 //la page ou l'utilisateur fait le choix enter les 3 interfaces possibles

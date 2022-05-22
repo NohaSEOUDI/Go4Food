@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="6dp">
+    android:layout_marginBottom="4dp">
 
     <ImageView
         android:id="@+id/imageViewDailyMeal"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:scaleType="fitXY"
         android:foreground="@drawable/foregroung_design"
         android:src="@drawable/burger_king_1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +31,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageViewDailyMeal" />
 
     <TextView
-        android:id="@+id/subTextViewNameDailyMenu"
+        android:id="@+id/descriptionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description Description Description"
@@ -43,7 +44,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/subSubTextViewNameDailyMenu"
+        android:id="@+id/discountTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20% Discount"
@@ -53,5 +54,5 @@
         android:layout_marginRight="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewDailyMeal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subTextViewNameDailyMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

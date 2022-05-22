@@ -20,8 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import fr.nohas.go4food.PasswordForgotten;
 import fr.nohas.go4food.R;
-import fr.nohas.go4food.client.ClientLoginActivity;
-import fr.nohas.go4food.client.ClientMenuActivity;
 
 public class DriverLoginActivity extends AppCompatActivity {
     TextView passwordForgetten;

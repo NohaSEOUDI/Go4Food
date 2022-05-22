@@ -4,29 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".client.ClientMenuActivity">
+    tools:context=".client.activities.ClientMenuActivity">
 
     <FrameLayout
         android:id="@+id/client_main_fragment_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomAppBar"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:backgroundTint="@color/gray">
+        android:backgroundTint="@color/gray"
+        android:focusable="auto"
+        android:isScrollContainer="false"
+        android:layerType="none"
+        android:layoutDirection="locale"
+        tools:ignore="BottomAppBar">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigButtClient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
             app:menu="@menu/bottom_app_bar_client" />
-
     </com.google.android.material.bottomappbar.BottomAppBar>
-
+</LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

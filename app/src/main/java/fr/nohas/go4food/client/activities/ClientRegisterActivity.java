@@ -1,4 +1,4 @@
-package fr.nohas.go4food.client;
+package fr.nohas.go4food.client.activities;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import fr.nohas.go4food.R;
+import fr.nohas.go4food.client.Client;
+
 public class ClientRegisterActivity extends AppCompatActivity {
     private FirebaseAuth clientAuth;
     private ProgressBar progressBar;

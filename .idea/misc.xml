@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
         <entry key="app/src/main/res/drawable/category_backround.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/change_bg.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/daily_meal_bg.xml" value="0.1195" />
         <entry key="app/src/main/res/drawable/default_bg.xml" value="0.141" />
         <entry key="app/src/main/res/drawable/foregroung_design.xml" value="0.131" />
         <entry key="app/src/main/res/drawable/item_vertical_bg.xml" value="0.1525" />
@@ -22,14 +23,18 @@
         <entry key="app/src/main/res/layouts/client/layout/activity_client_interface.xml" value="0.10552536231884058" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_login.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_menu.xml" value="0.18" />
+        <entry key="app/src/main/res/layouts/client/layout/activity_detailed_daily_meal.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/client/layout/activity_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/client/layout/activity_register_client.xml" value="0.2" />
         <entry key="app/src/main/res/layouts/client/layout/daily_meal_item.xml" value="0.22" />
+        <entry key="app/src/main/res/layouts/client/layout/detailed_daily_meal_item.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/client/layout/fragment_client__home_.xml" value="0.22" />
+        <entry key="app/src/main/res/layouts/client/layout/fragment_client_cart.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/client/layout/fragment_client_daily_meal.xml" value="0.18" />
         <entry key="app/src/main/res/layouts/client/layout/fragment_client_setting.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/client/layout/home_horizontal_item.xml" value="0.67" />
         <entry key="app/src/main/res/layouts/client/layout/home_vertical_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layouts/client/layout/my_cart_item.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layouts/client/layout/viewholder_category_item.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_interface.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/driver/layout/activity_driver_login.xml" value="0.25" />
@@ -48,6 +53,7 @@
         <entry key="app/src/main/res/layouts/resto/drawable/ic_notifications.xml" value="0.1435" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_rule.xml" value="0.1855" />
         <entry key="app/src/main/res/layouts/resto/drawable/ic_shopping_cart.xml" value="0.1435" />
+        <entry key="app/src/main/res/layouts/resto/drawable/ic_stars.xml" value="0.1585" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_add_offer.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_interface.xml" value="0.1" />
         <entry key="app/src/main/res/layouts/resto/layout/activity_resto_login.xml" value="0.25" />

@@ -1,4 +1,4 @@
-package fr.nohas.go4food.client;
+package fr.nohas.go4food.client.fragments;
 
 import android.os.Bundle;
 

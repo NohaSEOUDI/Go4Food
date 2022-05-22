@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.security.identity.CipherSuiteNotSupportedException;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,9 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import fr.nohas.go4food.R;
-import fr.nohas.go4food.client.ClientInterfaceActivity;
-import fr.nohas.go4food.client.ClientLoginActivity;
-import fr.nohas.go4food.client.ClientRegisterActivity;
 
 public class DriverRegisterActivity extends AppCompatActivity {
     FirebaseAuth driverAuth;

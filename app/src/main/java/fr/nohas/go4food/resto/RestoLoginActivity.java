@@ -20,10 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import fr.nohas.go4food.PasswordForgotten;
 import fr.nohas.go4food.R;
-import fr.nohas.go4food.client.ClientLoginActivity;
-import fr.nohas.go4food.client.ClientMenuActivity;
-import fr.nohas.go4food.driver.DriverLoginActivity;
-import fr.nohas.go4food.driver.DriverMenuActivity;
 
 //page de connexion : mail et mot de passe
 public class RestoLoginActivity extends AppCompatActivity {

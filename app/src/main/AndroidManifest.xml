@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Go4Food">
         <activity
+            android:name=".client.activities.DetailedDailyMealActivity"
+            android:exported="false" />
+        <activity
             android:name=".PasswordForgotten"
             android:exported="false" />
         <activity
@@ -29,7 +32,7 @@
             android:name=".driver.DriverMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".client.ClientMenuActivity"
+            android:name=".client.activities.ClientMenuActivity"
             android:exported="false" />
         <activity
             android:name=".resto.RestoRegisterActivity"
@@ -40,7 +43,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".client.ClientRegisterActivity"
+            android:name=".client.activities.ClientRegisterActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -52,7 +55,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".client.ClientLoginActivity"
+            android:name=".client.activities.ClientLoginActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -74,7 +77,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".client.ClientInterfaceActivity"
+            android:name=".client.activities.ClientInterfaceActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
