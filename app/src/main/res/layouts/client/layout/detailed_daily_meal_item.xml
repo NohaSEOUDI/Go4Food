@@ -89,6 +89,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
+                    android:id="@+id/btt_addItem"
                     android:layout_width="97dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"

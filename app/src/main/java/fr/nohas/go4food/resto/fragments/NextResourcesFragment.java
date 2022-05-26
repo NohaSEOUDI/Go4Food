@@ -16,6 +16,9 @@ import fr.nohas.go4food.R;
 public class NextResourcesFragment extends Fragment {
     ImageView image;
     TextView tv1,tv2;
+    public NextResourcesFragment(){
+
+    }
     public NextResourcesFragment(int img, String s1,String s2){
         //this.image = img;
         //tv1,tv2;

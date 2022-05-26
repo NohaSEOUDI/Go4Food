@@ -18,6 +18,8 @@
         <entry key="app/src/main/res/drawable/user_item_bg.xml" value="0.194" />
         <entry key="app/src/main/res/layout/activity_client_interface.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_client_login.xml" value="0.14855072463768115" />
+        <entry key="app/src/main/res/layout/activity_client_order_driver_in_progress.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_client_order_in_progress.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_driver_interface.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_password_forgotten.xml" value="0.22" />
@@ -29,6 +31,7 @@
         <entry key="app/src/main/res/layout/fragment_driver_notifications.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_driver_position.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_resto_historic.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_resto_profile.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_interface.xml" value="0.10552536231884058" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_login.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/client/layout/activity_client_menu.xml" value="0.18" />

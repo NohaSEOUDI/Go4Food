@@ -1,7 +1,8 @@
 package fr.nohas.go4food.client;
 
 public class Client {
-    public String cl_first_name,cl_last_name,cl_phone_number,cl_email_adress,cl_password;
+    private static String cl_first_name;
+    public String cl_last_name,cl_phone_number,cl_email_adress,cl_password;
 
     public Client(){
 
@@ -12,5 +13,9 @@ public class Client {
         this.cl_phone_number=cl_phone_number;
         this.cl_email_adress=cl_email_adress;
         this.cl_password=cl_password;
+    }
+
+    public static String getCl_first_name() {
+        return cl_first_name;
     }
 }

@@ -39,9 +39,9 @@ public class RestoRegisterActivity extends AppCompatActivity {
 
         //initialize Firebase auth
         restoAuth = FirebaseAuth.getInstance();
-        /*if(restoAuth.getCurrentUser() != null){
+        if(restoAuth.getCurrentUser() != null){
             Toast.makeText(this, "You have already an account !", Toast.LENGTH_SHORT).show();
-        }*/
+        }
         nextButton.setOnClickListener(View->{
             if(registerResto())
                 startActivity(new Intent(RestoRegisterActivity.this,RestoWeelyPlanningActivity.class));

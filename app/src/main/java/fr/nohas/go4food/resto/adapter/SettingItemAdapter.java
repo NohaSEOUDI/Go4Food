@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import fr.nohas.go4food.R;
+import fr.nohas.go4food.driver.driverfragments.DriverAccountFragment;
 import fr.nohas.go4food.resto.fragments.NextResourcesFragment;
 
 public class SettingItemAdapter extends RecyclerView.Adapter<SettingItemAdapter.MyViewHolder> {
@@ -51,7 +52,7 @@ public class SettingItemAdapter extends RecyclerView.Adapter<SettingItemAdapter.
             public void onClick(View view) {
                 //we launch new Fragment here 
                 AppCompatActivity activity = (AppCompatActivity)view.getContext();
-                fragment = new NextResourcesFragment(listIcons[position],listSittings[position],listDesc[position]);
+                fragment = new DriverAccountFragment();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_holder,fragment).addToBackStack(null).commit();
 
             }

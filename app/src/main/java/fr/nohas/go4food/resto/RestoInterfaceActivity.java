@@ -18,7 +18,7 @@ public class RestoInterfaceActivity extends AppCompatActivity {
         btt_register=findViewById(R.id.butt_register);
         btt_register.setOnClickListener(view -> {
             startActivity(new Intent(RestoInterfaceActivity.this, RestoMenuActivity.class));
-           //startActivity(new Intent(RestoInterfaceActivity.this, RestoRegisterActivity.class));
+            startActivity(new Intent(RestoInterfaceActivity.this, RestoRegisterActivity.class));
         });
         btt_login=findViewById(R.id.butt_signIn);
         btt_login.setOnClickListener(view -> {

@@ -64,10 +64,10 @@ public class DriverRegisterActivity extends AppCompatActivity {
         });
         //initialiez FireBase Auth
         driverAuth=FirebaseAuth.getInstance();
-        /*if(driverAuth.getCurrentUser() != null){
+        if(driverAuth.getCurrentUser() != null){
             Toast.makeText(this, "You already have an account", Toast.LENGTH_SHORT).show();
             return;
-        }*/
+        }
 
         validate_btn.setOnClickListener(View->{
             if(driverRegister())

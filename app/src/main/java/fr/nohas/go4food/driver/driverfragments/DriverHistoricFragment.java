@@ -29,18 +29,13 @@ public class DriverHistoricFragment extends Fragment {
         recyclerViewVerHistoric = rootView.findViewById(R.id.recycler_view_ver_historic);
 
         listusersHistModeles = new ArrayList<>();
-      //  (int image, String name, String ville, String address, String hour, String date) {
-        listusersHistModeles.add(new UsersHistModel(R.drawable.pic1,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        listusersHistModeles.add(new UsersHistModel(R.drawable.pic2,"Yassmine Louis","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        listusersHistModeles.add(new UsersHistModel(R.drawable.pic3,"Marise Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        listusersHistModeles.add(new UsersHistModel(R.drawable.pic4,"Pierre Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        listusersHistModeles.add(new UsersHistModel(R.drawable.pic5,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        listusersHistModeles.add(new UsersHistModel(R.drawable.pic6,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
 
-        //listusersHistModeles.add(new UsersHistModel(R.drawable.pic7,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        //listusersHistModeles.add(new UsersHistModel(R.drawable.pic8,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        //listusersHistModeles.add(new UsersHistModel(R.drawable.pic9,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
-        //listusersHistModeles.add(new UsersHistModel(R.drawable.pic10,"Ali Djamel","Montpellier","14 rue de la fontaine","12h30","10-02-22"));
+        listusersHistModeles.add(new UsersHistModel(R.drawable.pic1,"Ali Magdi","Montpellier","14 rue de la fontaine","17h30","10-02-22"));
+        listusersHistModeles.add(new UsersHistModel(R.drawable.pic2,"Yassmine Louis","Paris","114 rue de la République","19h20","15-12-22"));
+        listusersHistModeles.add(new UsersHistModel(R.drawable.pic3,"Marise Faiez","Lyon","12 rue de la Mermouz","12h30","12-08-22"));
+        listusersHistModeles.add(new UsersHistModel(R.drawable.pic4,"Pierre Jean","Avignon","192 Avenue Augustin Fliche","13h33","21-05-22"));
+        listusersHistModeles.add(new UsersHistModel(R.drawable.pic5,"Tom Paul","Marseille","134 Avenue Triolet","11h00","18-09-22"));
+        listusersHistModeles.add(new UsersHistModel(R.drawable.pic6,"Paul Alpha","Montpellier","99 rue de la Mosson","21h40","13-04-22"));
 
         //indtance de l'adapteur
         histAdapter = new HistAdapter(getContext(),listusersHistModeles);

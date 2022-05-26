@@ -41,7 +41,7 @@ public class ClientLoginActivity extends AppCompatActivity {
 
         passwordForgetten= findViewById(R.id.tv_iforgetPass);
         login= findViewById(R.id.btn_next);
-        //TODO: système de vérif ici
+
         login.setOnClickListener(View->{
             userLogin();
         });

@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import fr.nohas.go4food.R;
-import fr.nohas.go4food.resto.fragments.RestoAddedDoneFragment;
+import fr.nohas.go4food.ClientOrderInProgressActivity;
 
 public class PaymentFragment extends Fragment {
     EditText number,day,year,validationNumber;
@@ -29,8 +29,9 @@ public class PaymentFragment extends Fragment {
 
         buttonSubmit.setOnClickListener(View ->  {
             if(checkEditTExt()){
-                fragmentPaymentOK = new RestoAddedDoneFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.client_main_fragment_holder,fragmentPaymentOK).addToBackStack(null).commit();
+                startActivity(new Intent(getActivity(), ClientOrderInProgressActivity.class));
+                //fragmentPaymentOK = new RestoAddedDoneFragment();
+                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.client_main_fragment_holder,fragmentPaymentOK).addToBackStack(null).commit();
             }
         });
         return rootView;

@@ -69,7 +69,7 @@ public class RestoOneProductFragment extends Fragment {
         //1) Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_resto_one_product, container, false);
 
-        //2) get all composants
+        //2) get all composants from xml
         edName = rootView.findViewById(R.id.et_name);
         edPrice = rootView.findViewById(R.id.et_price);
         edVariation = rootView.findViewById(R.id.et_variations);
@@ -116,7 +116,27 @@ public class RestoOneProductFragment extends Fragment {
         String priceStr = edPrice.getText().toString();
         String variationStr = edVariation.getText().toString();
         String descriptionStr = edDescription.getText().toString();
-        double priceDouble = Double.parseDouble(priceStr);
+
+        if(nameStr.isEmpty()){
+            edName.setError(getString(R.string.nameResto_required));
+            edName.requestFocus();
+            return;
+        }
+        if(priceStr.isEmpty()){
+            edPrice.setError("Price is required");
+            edPrice.requestFocus();
+            return;
+        }
+        if(variationStr.isEmpty()){
+            edVariation.setError("Error");
+            edVariation.requestFocus();
+            return;
+        }
+        if(descriptionStr.isEmpty()){
+            edDescription.setError("Error");
+            edDescription.requestFocus();
+            return;
+        }
 
 
         if(imageUri != null){
@@ -141,7 +161,7 @@ public class RestoOneProductFragment extends Fragment {
                         product.put("name", nameStr);
                         product.put("description", descriptionStr);
                         product.put("variation", variationStr);
-                        product.put("prix", priceDouble);
+                        product.put("prix", priceStr);
 
                         // Add a new document with a generated ID query to store Data
                         db.collection("Product")
@@ -152,7 +172,7 @@ public class RestoOneProductFragment extends Fragment {
                                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                                         Toast.makeText(getActivity(), "successfully registered :) ", Toast.LENGTH_SHORT).show();
                                         //ici on fait une rédirection vers une autre page yoo
-                                        nextFragment=new RestoAddedDoneFragment();
+                                        nextFragment=new NextResourcesFragment();
                                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,nextFragment).addToBackStack(null).commit();
                                     }
                                 })

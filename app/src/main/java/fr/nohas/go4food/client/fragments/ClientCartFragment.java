@@ -33,13 +33,13 @@ public class ClientCartFragment extends Fragment {
         buttonMakeOrder = rootView.findViewById(R.id.buttonTotalCart);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         list = new ArrayList<>();
-        list.add(new CartModel(R.drawable.french_takos,"Order 1","30","4.4"));
-        list.add(new CartModel(R.drawable.pizza_1,"Order 2","10","4.9"));
-        list.add(new CartModel(R.drawable.pizza_hut,"Order 3","23","4.3"));
-        list.add(new CartModel(R.drawable.burger_king_1,"Order 4","39","4.1"));
+        list.add(new CartModel(R.drawable.tacos5,"Order 1","30","4.4"));
+        list.add(new CartModel(R.drawable.pizza6,"Order 2","10","4.9"));
+        list.add(new CartModel(R.drawable.fish4,"Order 3","23","4.3"));
+        list.add(new CartModel(R.drawable.frites7,"Order 4","39","4.1"));
         list.add(new CartModel(R.drawable.pizza_1,"Order 5","10","4.9"));
-        list.add(new CartModel(R.drawable.pizza_hut,"Order 6","23","4.3"));
-        list.add(new CartModel(R.drawable.burger_king_1,"Order 7","39","4.1"));
+        list.add(new CartModel(R.drawable.fish7,"Order 6","23","4.3"));
+        list.add(new CartModel(R.drawable.frites5,"Order 7","39","4.1"));
 
         cartAdapter = new CartAdapter(list);
         recyclerView.setAdapter(cartAdapter);

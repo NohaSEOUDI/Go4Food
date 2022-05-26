@@ -36,6 +36,8 @@ public class DetailedDailyAdapter extends RecyclerView.Adapter<DetailedDailyAdap
         holder.price.setText(list.get(position).getPrice());
         holder.timing.setText(list.get(position).getTiming());
 
+
+
     }
 
     @Override

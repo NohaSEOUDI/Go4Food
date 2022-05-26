@@ -18,7 +18,7 @@ public class DriverInterfaceActivity extends AppCompatActivity {
         btt_register=findViewById(R.id.butt_register);
         btt_register.setOnClickListener(view -> {
             startActivity(new Intent(DriverInterfaceActivity.this, DriverMenuActivity.class));
-           //startActivity(new Intent(DriverInterfaceActivity.this, DriverRegisterActivity.class));
+            startActivity(new Intent(DriverInterfaceActivity.this, DriverRegisterActivity.class));
         });
 
         btt_login=findViewById(R.id.butt_signIn);

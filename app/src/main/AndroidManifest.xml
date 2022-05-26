@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Go4Food">
         <activity
+            android:name=".ClientOrderDriverInProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClientOrderInProgressActivity"
+            android:exported="false" />
+        <activity
             android:name=".client.activities.DetailedDailyMealActivity"
             android:exported="false" />
         <activity

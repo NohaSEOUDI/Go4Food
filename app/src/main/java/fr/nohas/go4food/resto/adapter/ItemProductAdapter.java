@@ -1,7 +1,5 @@
 package fr.nohas.go4food.resto.adapter;
 
-import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +23,9 @@ import fr.nohas.go4food.resto.Produit;
 public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.MyViewHolder> {
    // Context context;
     ArrayList<Produit> arrayListProd;
-    Uri uri;
+
 
     public ItemProductAdapter(ArrayList<Produit> arrayListProd) {
-      //  this.context = context;
         this.arrayListProd = arrayListProd;
     }
 
@@ -41,21 +38,22 @@ public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Produit p = arrayListProd.get(position);
-        holder.nameProd.setText(p.getName());
+
+        holder.nameProd.setText(arrayListProd.get(position).getName());
+        holder.descriptionProd.setText(arrayListProd.get(position).getDescription());
+        holder.variationProd.setText(arrayListProd.get(position).getVariation());
+        holder.price.setText(arrayListProd.get(position).getPrice());
+
+
         //holder.image.setImageResource(p.getPhoto());//.toString()));//uri); // il faut mettre l'uri de l'image here
         Glide.with(holder.image.getContext())
-                .load(p.getPhoto())
+                .load(arrayListProd.get(position).getPhoto())
                 .placeholder(R.drawable.french_takos)
                 .circleCrop()
                 .error(R.drawable.french_takos)
                 .into(holder.image);
 
-      /*  holder.image.setOnClickListener(View ->{
-            AppCompatActivity activity = (AppCompatActivity) View.getContext();
-            activity.getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new DescProductFragment()).addToBackStack(null).commit();
 
-        });*/
     }
 
     @Override
@@ -65,12 +63,15 @@ public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.
 
     //inner class
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView nameProd;
+        TextView nameProd,descriptionProd,price,variationProd;
         ImageView image;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView); // les composant qui sont dans le itemRow product
             nameProd = itemView.findViewById(R.id.tv_prodName);
+            descriptionProd= itemView.findViewById(R.id.tv_prodDesc); // OK
+            price = itemView.findViewById(R.id.tv_price);
+            variationProd = itemView.findViewById(R.id.tv_prodVariation);
             image = itemView.findViewById(R.id.iv_image);
         }
     }

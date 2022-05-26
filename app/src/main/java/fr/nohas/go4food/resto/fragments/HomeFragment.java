@@ -63,6 +63,8 @@ public class HomeFragment extends Fragment {
                             Log.d(TAG, document.getId() + " => " + document.getData());
                             p.setPhoto(document.getString("photo"));
                             p.setName(document.getString("name"));
+                            p.setPrice(document.getString("prix"));
+                            p.setVariation(document.getString("variation"));
                             p.setDescription(document.getString("description"));
                             arrayList.add(p);
                         }

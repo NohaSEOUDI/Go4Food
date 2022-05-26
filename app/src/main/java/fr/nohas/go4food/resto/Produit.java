@@ -1,19 +1,15 @@
 package fr.nohas.go4food.resto;
 
-import java.net.URI;
-
 //classe produit pour enregister un produit dans la bdd
 public class Produit {
-    private String photo, name,description,variation;
-
-    private double prix;
+    private String photo, name,description,variation, price;
     public Produit(){ }
-    public Produit(String photo, String name, String description, String variation, double prix){
+    public Produit(String photo, String name, String description, String variation, String prix){
         this.photo = photo;
         this.name = name;
         this.description = description;
         this.variation = variation;
-        this.prix = prix;
+        this.price = prix;
     }
     //--------------------getters---------------------
     public String getPhoto() {
@@ -32,8 +28,8 @@ public class Produit {
         return variation;
     }
 
-    public double getPrix() {
-        return prix;
+    public String getPrice() {
+        return price;
     }
 
     //--------------------setters---------------------
@@ -54,8 +50,8 @@ public class Produit {
         this.variation = variation;
     }
 
-    public void setPrix(double prix) {
-        this.prix = prix;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
 
