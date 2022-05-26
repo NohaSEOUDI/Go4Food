@@ -29,7 +29,7 @@ public class ClientHomeFragment extends Fragment implements UpdateVerticalRec {
     RecyclerView homeHorizontalRecyclerView,homeVerticalRecyclerView;
     ArrayList<HomeHorModel> listHomeHorModels;
     HomeHorAdapter homeHorAdapter;
-    TextView nameClient;
+
 
     ///////////////////vertical
     ArrayList<HomeVerModel> listhomeVerModels;
@@ -39,8 +39,7 @@ public class ClientHomeFragment extends Fragment implements UpdateVerticalRec {
         View root= inflater.inflate(R.layout.fragment_client__home_, container, false);
         homeHorizontalRecyclerView = root.findViewById(R.id.home_hor_recyclerView);
         homeVerticalRecyclerView = root.findViewById(R.id.home_ver_recyclerView);
-        nameClient = root.findViewById(R.id.textView3);
-        nameClient.setText(Client.getCl_first_name());
+
         //////////////////////////////Horizontal Recycler view
         listHomeHorModels = new ArrayList<>();
         listHomeHorModels.add(new HomeHorModel(R.drawable.frites7,"Frittes"));
