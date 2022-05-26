@@ -1,5 +1,6 @@
 package fr.nohas.go4food.resto.fragments;
 
+import android.content.ContentResolver;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.net.URI;
 import java.util.ArrayList;
 
 import fr.nohas.go4food.R;
@@ -38,13 +40,12 @@ public class HomeFragment extends Fragment {
     ArrayList<Produit> arrayList;
     String TAG = "HomeFragment";
     Produit p;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = rootView.findViewById(R.id.product_recyclerView);
-        databaseReference = FirebaseFirestore.getInstance();//("Product");/////
-       // DocumentReference documentReference = fStore.collection("Porduct").document(produID)
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -52,42 +53,29 @@ public class HomeFragment extends Fragment {
         myAdapter = new ItemProductAdapter(arrayList);
         recyclerView.setAdapter(myAdapter);
 
-
+        databaseReference = FirebaseFirestore.getInstance();//("Product");/////
         databaseReference.collection("Product")
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                p=new Produit();
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                                p.setPhoto(document.getString("photo"));
-                                p.setName(document.getString("name"));
-                                arrayList.add(p);
-                            }
-                            myAdapter.notifyDataSetChanged();
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            p=new Produit();
+                            Log.d(TAG, document.getId() + " => " + document.getData());
+                            p.setPhoto(document.getString("photo"));
+                            p.setName(document.getString("name"));
+                            p.setDescription(document.getString("description"));
+                            arrayList.add(p);
                         }
+                        myAdapter.notifyDataSetChanged();
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.getException());
                     }
                 });
 
-        /*databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) { //we fetch all data
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Produit p = dataSnapshot.getValue(Produit.class);
-                    arrayList.add(p);
-                }
-                myAdapter.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });*/
         return rootView;
 
     }
+
+
 }

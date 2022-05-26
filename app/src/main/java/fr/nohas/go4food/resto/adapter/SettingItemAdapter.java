@@ -1,5 +1,6 @@
 package fr.nohas.go4food.resto.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -39,7 +40,7 @@ public class SettingItemAdapter extends RecyclerView.Adapter<SettingItemAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {  //see le param
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {  //see le param
         //to dynamically set data
         holder.textView1.setText(listSittings[position]);
         holder.textView2.setText(listDesc[position]);

@@ -12,10 +12,9 @@ import android.view.ViewGroup;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
-import fr.nohas.go4food.Adaptor.HomeHorAdapter;
-import fr.nohas.go4food.Adaptor.HomeVerAdapter;
+import fr.nohas.go4food.client.Adaptor.HomeHorAdapter;
+import fr.nohas.go4food.client.Adaptor.HomeVerAdapter;
 import fr.nohas.go4food.R;
 import fr.nohas.go4food.client.interfaces.UpdateVerticalRec;
 import fr.nohas.go4food.client.models.HomeHorModel;

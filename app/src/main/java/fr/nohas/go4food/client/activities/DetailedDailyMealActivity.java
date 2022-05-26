@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.nohas.go4food.Adaptor.DetailedDailyAdapter;
+import fr.nohas.go4food.client.Adaptor.DetailedDailyAdapter;
 import fr.nohas.go4food.R;
 import fr.nohas.go4food.client.models.DetailedDailyModel;
 

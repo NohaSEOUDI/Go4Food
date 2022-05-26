@@ -34,17 +34,17 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
        />
-      <LinearLayout
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp">
-        <ImageView
+
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/et_photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-        />
-      </LinearLayout>
+            android:scaleType="fitXY"
+            app:riv_corner_radius="24dp" />
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/tILName"
@@ -132,6 +132,7 @@
         android:text="@string/next"
         android:textColor="@color/black"
         android:textStyle="bold" />
+
     </TableLayout>
 
 </ScrollView>

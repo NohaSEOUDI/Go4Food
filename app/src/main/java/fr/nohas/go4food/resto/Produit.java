@@ -1,8 +1,11 @@
 package fr.nohas.go4food.resto;
 
+import java.net.URI;
+
 //classe produit pour enregister un produit dans la bdd
 public class Produit {
-    private String photo,name,description,variation;
+    private String photo, name,description,variation;
+
     private double prix;
     public Produit(){ }
     public Produit(String photo, String name, String description, String variation, double prix){

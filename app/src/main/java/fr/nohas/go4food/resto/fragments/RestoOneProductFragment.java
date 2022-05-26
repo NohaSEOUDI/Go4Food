@@ -29,6 +29,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -42,7 +43,6 @@ import java.util.UUID;
 import fr.nohas.go4food.R;
 import fr.nohas.go4food.resto.Produit;
 
-//tt ça doit être enregister dans la base de donénes !!
 // on stocke la photo dans storage
 // les données sont dans realTimeDatabase
 //page pour choisir une seule produit et l'enregister dans la bdd
@@ -56,7 +56,10 @@ public class RestoOneProductFragment extends Fragment {
 
     //pour stocker dans la base de données
     FirebaseStorage storageReference; // ici on stocke l'image dans Storage
+    private DatabaseReference root = FirebaseDatabase.getInstance().getReference().child("Procduct"); // doit être changer en produit
+
     FirebaseFirestore db;
+
     ProgressDialog progressDialog;
     Uri imageUri;
     Produit product; // notre classe de produit
@@ -108,6 +111,7 @@ public class RestoOneProductFragment extends Fragment {
         return rootView;
     }
     private void uploadImage(){
+        //String photo = productPic.getResources().toString();
         String nameStr = edName.getText().toString();
         String priceStr = edPrice.getText().toString();
         String variationStr = edVariation.getText().toString();
@@ -126,11 +130,14 @@ public class RestoOneProductFragment extends Fragment {
                     if(task.isSuccessful()){
                         progressDialog.dismiss();
                         //image uploaded successfuly
-                        Toast.makeText(getActivity(), "image uploaded successfuly", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "All uploaded successfuly", Toast.LENGTH_SHORT).show();
                         //(String photo, String name, String description, String variation, double prix)
                         // Create a new user with a first and last name
                         Map<String, Object> product = new HashMap<>();
-                        product.put("photo", task.getResult().toString());
+                        Log.d("ImageUri",""+imageUri);
+                        Log.d("taskgetResulttoString:",task.getResult().toString());
+                        Log.d("storageReference2:",""+storageReference2.getDownloadUrl().toString());
+                        product.put("photo", storageReference2.getDownloadUrl().toString());//task.getResult().toString());//le lien vers la photo
                         product.put("name", nameStr);
                         product.put("description", descriptionStr);
                         product.put("variation", variationStr);

@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".driver.DriverSetteingsFragment">
+    tools:context=".driver.driverfragments.DriverSetteingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/driver_settings_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Settings fragement" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

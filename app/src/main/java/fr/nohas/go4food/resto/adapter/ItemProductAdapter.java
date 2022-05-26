@@ -5,19 +5,21 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
 import fr.nohas.go4food.R;
 import fr.nohas.go4food.resto.Produit;
-import fr.nohas.go4food.resto.fragments.DescProductFragment;
+
 
 //to adapt our recycler view of product
 public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.MyViewHolder> {
@@ -41,13 +43,19 @@ public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Produit p = arrayListProd.get(position);
         holder.nameProd.setText(p.getName());
-        holder.image.setImageURI(null);//uri); // il faut mettre l'uri de l'image here
+        //holder.image.setImageResource(p.getPhoto());//.toString()));//uri); // il faut mettre l'uri de l'image here
+        Glide.with(holder.image.getContext())
+                .load(p.getPhoto())
+                .placeholder(R.drawable.french_takos)
+                .circleCrop()
+                .error(R.drawable.french_takos)
+                .into(holder.image);
 
-        holder.image.setOnClickListener(View ->{
+      /*  holder.image.setOnClickListener(View ->{
             AppCompatActivity activity = (AppCompatActivity) View.getContext();
             activity.getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new DescProductFragment()).addToBackStack(null).commit();
 
-        });
+        });*/
     }
 
     @Override

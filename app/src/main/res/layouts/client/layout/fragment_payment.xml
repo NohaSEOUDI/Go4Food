@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.fragments.PaymentFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carte bancaire"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/edt_num_carte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numéro "
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_gravity="center"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        >
+
+        <EditText
+            android:id="@+id/edt_jour_carte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jour"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/edt_annee_carte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Année"
+            android:maxLength="4"
+            android:layout_weight="1"
+            android:inputType="date"
+            android:layout_gravity="center"/>
+    </TableRow>
+
+        <EditText
+            android:id="@+id/edt_numV_carte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numéro de contrôle"
+            android:textColor="@color/black"
+            android:layout_weight="0"
+            android:maxLength="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="center"/>
+
+       <Button
+           android:id="@+id/bt_ok_carte"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           android:layout_marginRight="22dp"
+           android:layout_marginLeft="22dp"
+           android:text="Ok"
+           />
+</TableLayout>

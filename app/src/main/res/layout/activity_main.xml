@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="28dp"
         android:layout_marginRight="288dp"
         android:text="@string/youAre"
         android:textColor="@color/white"
@@ -46,8 +46,8 @@
 
     <Button
         android:id="@+id/butt_client"
-        android:layout_width="379dp"
-        android:layout_height="55dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
         android:layout_marginTop="108dp"
         android:backgroundTint="@android:color/white"
         android:text="@string/client"
@@ -59,8 +59,8 @@
 
     <Button
         android:id="@+id/butt_Driver"
-        android:layout_width="379dp"
-        android:layout_height="55dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="@android:color/white"
         android:text="@string/Driver"
@@ -72,8 +72,8 @@
 
     <Button
         android:id="@+id/butt_Resto"
-        android:layout_width="379dp"
-        android:layout_height="55dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
         android:backgroundTint="@android:color/white"
         android:text="@string/Restaurant"
         android:textColor="@color/black"
